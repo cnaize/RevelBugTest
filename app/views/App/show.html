@@ -2,23 +2,10 @@
 {{template "header.html" .}}
 
 <h1>Page:</h1>
-<form action="{{url "App.Update" .page.Id}}" method="POST">
-  <p class="field">
-    {{.page.CommentsEnabled}}
-    <label>Comments Enabled:</label>
-    {{if .page.CommentsEnabled}}
-      <input type="radio" name="commentsenabled" value="true" checked>Yes
-      <br>
-      <input type="radio" name="commentsenabled" value="false">No
-    {{else}}
-      <input type="radio" name="commentsenabled" value="true">Yes
-      <br>
-      <input type="radio" name="commentsenabled" value="false" checked>No
-    {{end}}
-  </p>
-  <p class="buttons">
-    <input type="submit" value="update" />
-  </p>
-</form>
+Id: {{.page.Id}}
+<br>
+CreatedAt: {{.page.CreatedAt}}
+<br>
+UpdatedAt: {{.page.UpdatedAt}}
 
 {{template "footer.html" .}}
